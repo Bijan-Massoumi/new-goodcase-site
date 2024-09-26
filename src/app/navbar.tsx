@@ -79,6 +79,7 @@ const Socials = () => (
       justifyContent: "center",
       alignItems: "center",
       gap: 2,
+      marginBottom: 2,
     }}
   >
     <Button

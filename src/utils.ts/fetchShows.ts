@@ -11,7 +11,6 @@ export const fetchShows = async (): Promise<Show[]> => {
     }
     const text = await response.text();
     const { data } = Papa.parse(text, { header: true });
-    console.log(data);
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const shows: Show[] = data.map((row: any) => ({
       month: row.month,

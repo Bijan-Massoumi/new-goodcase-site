@@ -80,7 +80,9 @@ export const Tagline: React.FC = () => {
           <Image
             src="/headshots/just-ryan.png"
             layout="fill"
+            priority
             objectFit="contain"
+            loading="eager"
             alt="Ryan Goodcase"
           />
         </Box>

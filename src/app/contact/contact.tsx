@@ -13,7 +13,7 @@ export const Contact = () => {
     <Box
       id="Contact"
       sx={{
-        minHeight: isMobile ? "auto" : "100vh",
+        minHeight: isMobile ? "auto" : "100dvh",
         display: "flex",
         flexDirection: isMobile ? "column" : "row",
         width: "100%",
@@ -23,7 +23,7 @@ export const Contact = () => {
       <Box
         sx={{
           width: isMobile ? "100%" : "50%",
-          height: isMobile ? "50vh" : "auto",
+          height: isMobile ? "50dvh" : "auto",
           backgroundColor: theme.palette.primary.main,
           position: "relative",
           display: "flex",

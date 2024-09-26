@@ -57,10 +57,10 @@ const LogoText = styled(Typography)(({ theme }) => ({
 
 const MobileMenu = styled(Box)(({ theme }) => ({
   position: "fixed",
-  top: "7vh",
+  top: "7dvh",
   left: 0,
   width: "100%",
-  height: "93vh",
+  height: "93dvh",
   background: `linear-gradient(to bottom, ${theme.palette.third.main}, ${theme.palette.third.light})`,
   display: "flex",
   flexDirection: "column",
@@ -145,7 +145,7 @@ export const Navbar = () => {
         position="fixed"
         className={menuOpen ? "menu-open" : ""}
         sx={{
-          height: "7vh",
+          height: "7dvh",
           backgroundColor: menuOpen
             ? `linear-gradient(to bottom, ${theme.palette.third.main}, ${theme.palette.third.light})`
             : "transparent",

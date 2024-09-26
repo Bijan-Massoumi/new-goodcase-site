@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v14-appRouter";
 import { ThemeProvider } from "@mui/material/styles";
 import theme from "../theme";
-import { Oswald } from "next/font/google";
+import { Space_Mono } from "next/font/google";
 
-const oswald = Oswald({
-  weight: ["300", "400", "500", "700"],
+const spaceMono = Space_Mono({
+  weight: ["400", "700"],
   subsets: ["latin"],
   display: "swap",
-  variable: "--font-oswald",
+  variable: "--font-space-mono",
 });
 
 export const metadata: Metadata = {
@@ -23,7 +23,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={oswald.variable}>
+      <body className={`${spaceMono.className} ${spaceMono.variable}`}>
         <AppRouterCacheProvider>
           <ThemeProvider theme={theme}>{children}</ThemeProvider>
         </AppRouterCacheProvider>

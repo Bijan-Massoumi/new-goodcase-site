@@ -46,7 +46,7 @@ export const Tagline: React.FC = () => {
         <Typography
           variant="h1"
           component="h1"
-          marginTop={{ md: "0", xs: "25vh" }}
+          marginTop={{ md: "0", xs: "20vh" }}
           sx={{ color: "white", fontWeight: "bold", textAlign: "center" }}
         >
           Ryan Goodcase
@@ -64,7 +64,7 @@ export const Tagline: React.FC = () => {
           }}
         >
           <Typography variant="h4" component="h2">
-            Watch my special
+            WATCH MY SPECIAL
           </Typography>
         </Link>
       </CenteredBox>

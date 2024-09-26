@@ -33,7 +33,7 @@ export const About = () => {
       >
         <Box sx={{ position: "relative", width: "100%", height: "100%" }}>
           <Image
-            src="/headshots/just-ryan2.png"
+            src="/headshots/just-ryan2-min.png"
             layout="fill"
             objectFit="contain"
             alt="Ryan Goodcase"

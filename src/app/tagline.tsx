@@ -78,7 +78,7 @@ export const Tagline: React.FC = () => {
           }}
         >
           <Image
-            src="/headshots/just-ryan.png"
+            src="/headshots/just-ryan-min.png"
             layout="fill"
             priority
             objectFit="contain"

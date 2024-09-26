@@ -35,6 +35,7 @@ export const About = () => {
           <Image
             src="/headshots/just-ryan2-min.png"
             layout="fill"
+            sizes="(max-width: 768px) 100vw, 50vw"
             objectFit="contain"
             alt="Ryan Goodcase"
           />

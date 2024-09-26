@@ -79,9 +79,10 @@ export const Tagline: React.FC = () => {
         >
           <Image
             src="/headshots/just-ryan-min.png"
-            layout="fill"
+            fill
             priority
-            objectFit="contain"
+            sizes="(max-width: 768px) 100vw, 50vw"
+            style={{ objectFit: "contain" }}
             loading="eager"
             alt="Ryan Goodcase"
           />

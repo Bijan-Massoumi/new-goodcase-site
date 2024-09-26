@@ -32,22 +32,27 @@ const StyledNav = styled(AppBar)(({ theme }) => ({
 }));
 
 const StyledNavButton = styled(Button)(({ theme }) => ({
-  color: "white",
+  color: theme.palette.text.primary,
   backgroundColor: "transparent",
   fontWeight: "bold",
   fontSize: "18px",
   margin: "0 10px",
   "&:hover": {
-    backgroundColor: theme.palette.secondary.main,
+    backgroundColor: "transparent",
+    color: theme.palette.text.secondary,
   },
 }));
 
-const LogoText = styled(Typography)(() => ({
-  color: "white",
+const LogoText = styled(Typography)(({ theme }) => ({
+  color: theme.palette.text.primary,
   fontWeight: "bold",
   fontSize: "24px",
   flexGrow: 1,
   cursor: "pointer",
+  transition: "color 0.3s ease",
+  "&:hover": {
+    color: theme.palette.text.secondary,
+  },
 }));
 
 const MobileMenu = styled(Box)(({ theme }) => ({
@@ -79,7 +84,6 @@ const Socials = () => (
       justifyContent: "center",
       alignItems: "center",
       gap: 2,
-      marginBottom: 2,
     }}
   >
     <Button
@@ -159,7 +163,7 @@ export const Navbar = () => {
               <LogoText variant="h6">Ryan Goodcase</LogoText>
             </Link>
             {!isMobile ? (
-              <Box sx={{ display: "flex", alignItems: "center" }}>
+              <Box sx={{ display: "flex" }}>
                 <StyledNavButton onClick={() => handleNavigation("/shows")}>
                   Shows
                 </StyledNavButton>
@@ -169,6 +173,46 @@ export const Navbar = () => {
                 <StyledNavButton onClick={() => handleNavigation("/contact")}>
                   Contact
                 </StyledNavButton>
+
+                <Button
+                  href="https://www.youtube.com/channel/UCFxfyJKXtWwN7GzcTO4C38w"
+                  sx={{
+                    backgroundColor: "transparent",
+                    color: (theme) => theme.palette.text.primary,
+                    "&:hover": {
+                      backgroundColor: "transparent",
+                      color: (theme) => theme.palette.text.secondary,
+                    },
+                  }}
+                >
+                  <YouTubeIcon sx={{ fontSize: 30 }} />
+                </Button>
+                <Button
+                  href="https://www.instagram.com/ryangoodcase/"
+                  sx={{
+                    backgroundColor: "transparent",
+                    color: (theme) => theme.palette.text.primary,
+                    "&:hover": {
+                      backgroundColor: "transparent",
+                      color: (theme) => theme.palette.text.secondary,
+                    },
+                  }}
+                >
+                  <InstagramIcon sx={{ fontSize: 30 }} />
+                </Button>
+                <Button
+                  href="https://twitter.com/ryangoodcase"
+                  sx={{
+                    backgroundColor: "transparent",
+                    color: (theme) => theme.palette.text.primary,
+                    "&:hover": {
+                      backgroundColor: "transparent",
+                      color: (theme) => theme.palette.text.secondary,
+                    },
+                  }}
+                >
+                  <TwitterIcon sx={{ fontSize: 30 }} />
+                </Button>
               </Box>
             ) : (
               <IconButton
@@ -206,7 +250,9 @@ export const Navbar = () => {
               Contact
             </MobileMenuButton>
           </Box>
-          <Socials />
+          <Box sx={{ marginBottom: 2 }}>
+            <Socials />
+          </Box>
         </MobileMenu>
       </Box>
     </>

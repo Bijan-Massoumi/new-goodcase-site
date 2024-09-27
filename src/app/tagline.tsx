@@ -6,7 +6,7 @@ import { Typography, Box, Link } from "@mui/material";
 import { styled } from "@mui/system";
 
 const FullHeightBox = styled(Box)(({ theme }) => ({
-  height: "100dvh",
+  height: "100vh",
   backgroundColor: theme.palette.primary.main,
   display: "flex",
   flexDirection: "row",
@@ -46,7 +46,7 @@ export const Tagline: React.FC = () => {
         <Typography
           variant="h1"
           component="h1"
-          marginTop={{ md: "0", xs: "20dvh" }}
+          marginTop={{ md: "0", xs: "20vh" }}
           sx={{ color: "white", fontWeight: "bold", textAlign: "center" }}
         >
           Ryan Goodcase

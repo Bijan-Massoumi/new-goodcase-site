@@ -4,16 +4,19 @@ import React from "react";
 import { Typography, Box, useMediaQuery } from "@mui/material";
 import Image from "next/image";
 import { useTheme } from "@mui/material/styles";
+import { usePathname } from "next/navigation";
 
 export const About = () => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+  const pathname = usePathname();
+  const isAboutPage = pathname === "/about";
 
   return (
     <Box
       id="About"
       sx={{
-        minHeight: isMobile ? "auto" : "100dvh",
+        minHeight: isMobile ? "auto" : "100vh",
         display: "flex",
         flexDirection: isMobile ? "column" : "row",
         width: "100%",
@@ -23,7 +26,7 @@ export const About = () => {
       <Box
         sx={{
           width: isMobile ? "100%" : "50%",
-          height: isMobile ? "50dvh" : "auto",
+          height: isMobile ? (isAboutPage ? "50dvh" : "50vh") : "auto",
           bgcolor: theme.palette.primary.main,
           position: "relative",
           display: "flex",
@@ -51,7 +54,7 @@ export const About = () => {
           justifyContent: "flex-start",
           padding: isMobile ? "0 10px" : 4,
           overflow: "auto",
-          boxSizing: "border-box", // Add this line
+          boxSizing: "border-box",
         }}
       >
         <Box>

@@ -17,7 +17,7 @@ import React from "react";
 import { useTheme } from "@mui/material/styles";
 
 const ShowsBox = styled(Box)(({ theme }) => ({
-  minHeight: "100dvh",
+  minHeight: "100vh",
   paddingTop: theme.spacing(8),
   paddingBottom: theme.spacing(8),
   display: "flex",

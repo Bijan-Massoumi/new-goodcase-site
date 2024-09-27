@@ -12,7 +12,7 @@ const ShowsPage = async () => {
       sx={{
         display: "flex",
         flexDirection: "column",
-        minHeight: "100dvh",
+        minHeight: "100vh",
         bgcolor: "background.default",
       }}
     >

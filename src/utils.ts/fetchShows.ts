@@ -4,7 +4,13 @@ import Papa from "papaparse";
 export const fetchShows = async (): Promise<Show[]> => {
   try {
     const response = await fetch(
-      "https://docs.google.com/spreadsheets/d/e/2PACX-1vRcnjsq9ckno-2onPEQsqqc86DtkWEwI8dP3rKk50SkWgg6jJVJ9F-YeeX8WvP5buBt0pre4zLXqcYw/pub?gid=0&single=true&output=csv"
+      "https://docs.google.com/spreadsheets/d/e/2PACX-1vRcnjsq9ckno-2onPEQsqqc86DtkWEwI8dP3rKk50SkWgg6jJVJ9F-YeeX8WvP5buBt0pre4zLXqcYw/pub?gid=0&single=true&output=csv",
+      {
+        cache: "no-store",
+        next: {
+          revalidate: 0,
+        },
+      }
     );
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
